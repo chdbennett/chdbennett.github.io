@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>Quantum Computing | IBM Research | IBM</title>
+      <meta name="geo.country" content="US">
+      <meta name="dcterms.rights" content="© Copyright IBM Corp. 2020">
+      <meta name="dcterms.date" content="2020-09-22">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="www_subdomain/favicon.ico">
+      <meta name="security" content="public">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="http://chdbennett.github.io/work_site/quantum-computing/">
+      <meta name="description" content="Quantum computing will empower us to take on challenges that have long been viewed as too complex and intractable for classical computers or even AI. But first we have to make it simple to use. We're pioneering specialized hardware and building libraries of circuits to empower researchers, developers and businesses to tap into quantum as a service through the cloud, using their preferred coding language and without having to be quantum experts themselves. Together, we will maximize the potential of quantum through the combination of powerful technologies and open-source innovation. We hope you’ll join us! ">
+      <meta name="keywords" content="ibm research science, ibm science research">
+      <meta property="og:url" content="http://chdbennett.github.io/work_site/quantum-computing/">
+      <meta property="og:title" content="Quantum Computing Research at IBM">
+      <meta property="og:description" content="Quantum computing will empower us to take on challenges that have long been viewed as too complex and intractable for classical computers or even AI. But first we have to make it simple to use. We're pioneering specialized hardware and building libraries of circuits to empower researchers, developers and businesses to tap into quantum as a service through the cloud, using their preferred coding language and without having to be quantum experts themselves. Together, we will maximize the potential of quantum through the combination of powerful technologies and open-source innovation. We hope you’ll join us! ">
+      <meta property="og:site_name" content="Quantum Computing Research at IBM">
+      <meta property="og:locale" content="en-US">
+      <!--<meta property="og:image" content="http://chdbennett.github.io/work_site/quantum-computing/images/social.jpg">-->
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="675">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="http://chdbennett.github.io/work_site/quantum-computing/">
+      <meta name="twitter:title" content="Quantum Computing Research at IBM">
+      <meta name="twitter:description" content="Quantum computing will empower us to take on challenges that have long been viewed as too complex and intractable for classical computers or even AI. But first we have to make it simple to use. We're pioneering specialized hardware and building libraries of circuits to empower researchers, developers and businesses to tap into quantum as a service through the cloud, using their preferred coding language and without having to be quantum experts themselves. Together, we will maximize the potential of quantum through the combination of powerful technologies and open-source innovation. We hope you’ll join us! ">
+      <meta name="twitter:creator" content="@IBMResearch">
+      <!--<meta name="twitter:image:src" content="http://chdbennett.github.io/work_site/quantum-computing/images/social.jpg">-->
+      <script>
+         digitalData = {
+         	page: {
+         		pageInfo: {
+         			effectiveDate: '1-Dec-2018',
+         			expiryDate: '1-Dec-2019',
+         			language: 'en-US',
+         			publishDate: '',
+         			publisher: 'IBM Corporation',
+         			version: 'v19a',
+         			ibm: {
+         				contentProducer: 'github repo',
+         				country: 'US',
+         				industry: 'ZZ',
+         				owner: 'Brian Robotnik',
+         				siteID: 'IBM_RESEARCH',
+         				subject: '',
+         				type: ''
+         			}
+         		}
+         	}
+         };
+      </script>
+      <!-- ibm standard styles and scripts -->
+      <link href="common/v18/css/css.css" rel="stylesheet">
+      <link href="common/v18/css/grid-fluid.css" rel="stylesheet">
+      <link href="common/v19a/css/css.css" rel="stylesheet">
+      <link href="common/v18/css/tables.css" rel="stylesheet">
+      <script src="common/stats/ida_stats.js"></script>
+      <script src="common/v18/js/js.js"></script>
+      <script src="common/v19a/js/js.js"></script>
+      <!--carbon -->
+      <link href="carbon-components/css/carbon-components.min.css" rel="stylesheet">
+      <script src="carbon-components/scripts/carbon-components.min.js"></script>
+      <!-- custom -->
+      <link href="css/ibm-research-custom.css" rel="stylesheet">
+      <link href="css/research-area.css" rel="stylesheet">
+      <!-- JavaScript -->
+      <script src="flickity_2/dist/flickity.pkgd.min.js"></script>
+      <!-- ibm page configuration -->
+      <script>
+         IBMCore.common.util.config.set({
+             footer: {
+                 type: "alternate"
+             },
+             masthead: {
+                 type: "alternate"
+             },
+         backtotop: {
+         	enabled: false
+         }
+         });
+      </script>
+   </head>
+   <body id="ibm-com" class="ibm-type ibm-masthead-sticky ibm-masthead-sticky-showing">
+      <div id="ibm-top" class="ibm-landing-page">
+         <!-- MASTHEAD_BEGIN -->
+         <div id="ibm-masthead" role="banner" aria-label="IBM">
+            <div id="ibm-mast-options">
+               <ul role="toolbar" aria-labelledby="ibm-masthead">
+                  <li id="ibm-geo" role="presentation"><a href="https://www.ibm.com/planetwide/select/selector.html">United States</a></li>
+               </ul>
+            </div>
+            <div id="ibm-universal-nav">
+               <div id="ibm-home">
+                  <a href="https://www.ibm.com/us-en/">
+                     <svg width="58" height="23" viewbox="0 0 58 23" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M58 21.467V23h-7.632v-1.533H58zm-18.316 0V23h-7.631v-1.533h7.631zm5.955 0L45.025 23l-.606-1.533h1.22zm-17.097 0A6.285 6.285 0 0 1 24.391 23H12.21v-1.533zm-17.858 0V23H0v-1.533h10.684zm29-3.067v1.533h-7.631V18.4h7.631zm7.148 0l-.594 1.533H43.82l-.598-1.533h3.609zm-16.764 0a5.719 5.719 0 0 1-.64 1.533H12.21V18.4zm-19.384 0v1.533H0V18.4h10.684zM58 18.4v1.533h-7.632V18.4H58zm-3.053-3.067v1.534h-4.579v-1.534h4.58zm-15.263 0v1.534h-4.579v-1.534h4.58zm8.345 0l-.6 1.534h-4.806l-.604-1.534h6.01zm-18.174 0c.137.49.213 1.003.213 1.534h-5.647v-1.534zm-10.013 0v1.534h-4.579v-1.534h4.58zm-12.21 0v1.534h-4.58v-1.534h4.58zm47.315-3.066V13.8h-4.579v-1.533h4.58zm-15.263 0V13.8h-4.579v-1.533h4.58zm9.541 0l-.597 1.533h-7.22l-.591-1.533h8.408zm-21.248 0c.527.432.98.951 1.328 1.533H15.263v-1.533zm-20.345 0V13.8h-4.58v-1.533h4.58zM44.599 9.2l.427 1.24.428-1.24h9.493v1.533h-4.579V9.324l-.519 1.41h-9.661l-.504-1.41v1.41h-4.579V9.2H44.6zm-36.967 0v1.533h-4.58V9.2h4.58zm21.673 0a5.95 5.95 0 0 1-1.328 1.533H15.263V9.2zm25.642-3.067v1.534h-8.964l.54-1.534h8.424zm-11.413 0l.54 1.534h-8.969V6.133h8.43zm-13.466 0c0 .531-.076 1.045-.213 1.534H24.42V6.133zm-10.226 0v1.534h-4.579V6.133h4.58zm-12.21 0v1.534h-4.58V6.133h4.58zm34.845-3.066l.53 1.533H32.054V3.067h10.424zm15.523 0V4.6H47.04l.55-1.533H58zm-28.573 0c.284.473.504.988.641 1.533H12.211V3.067zm-18.743 0V4.6H0V3.067h10.684zM41.406 0l.54 1.533h-9.893V0h9.353zM58 0v1.533h-9.881L48.647 0H58zM24.39 0c1.601 0 3.057.581 4.152 1.533H12.211V0zM10.685 0v1.533H0V0h10.684z" fill="#161616" fill-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+               <div class="ibm-parent-site-name">
+                  <div class="dr-masthead-divider"></div>
+                  <a id="nav-home" class="dr-home ibm-type-d ibm-mb-0" href="/">IBM Research</a>
+               </div>
+               <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+                  <li><a href="https://www.ibm.com/sitemap/us/en/">Site map</a></li>
+               </ul>
+               <div class="ibm-sitenav-menu-list">
+                  <ul id="research-primary-navigation" role="menubar">
+                     <li role="presentation" class="ibm-haschildlist "> <button id="nav-focusareas" class="ai-nav-item nav-expanded ibm-nav-selected" role="menuitem">Focus areas</button></li>
+                     <li role="presentation"><a role="menuitem" href="https://www.draco.res.ibm.com/experiments?lnk=nav" id="nav-experiments" class="research-nav-item">Experiments</a></li>
+                     <li role="presentation"><a role="menuitem" href="https://www.draco.res.ibm.com/collaborate-with-us?lnk=nav" id="nav-collaborate" class="research-nav-item">Collaborate</a></li>
+                     <li role="presentation"><a role="menuitem" href="https://www.ibm.com/employment/#jobs?job-category=Research" id="nav-about" class="research-nav-item">Careers</a></li>
+                     <li role="presentation"><a role="menuitem" href="https://www.draco.res.ibm.com/about?lnk=nav" id="nav-about" class="research-nav-item">About</a></li>
+                     <li role="presentation"><a role="menuitem" href="blog/lnk_nav.html" id="nav-blog" class="research-nav-item">Blog</a></li>
+                     <li class="" role="presentation" style="float:right;"><p class="nav_cta_button"> <a class="ibm-btn-pri bx--btn--primary " style="margin-top:4px;" target="blank" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-44015" role="menuitem" target="_self" tabindex="-1"><span style="font-size:.9em;color:#ffffff;">Sign up for newsletter</span></a></p></li>
+                  </ul>
+               </div>
+               <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+                  <form id="ibm-search-form" action="https://www.ibm.com/Search/">
+                     <p>
+                        <label for="q"><span class="ibm-access">Search</span></label>
+                        <input maxlength="100" value="" name="q" id="q">
+                        <input type="hidden" value="18" name="v">
+                        <input type="hidden" value="utf" name="en">
+                        <input type="hidden" value="en" name="lang">
+                        <input type="hidden" value="us" name="cc">
+                        <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit">
+                     </p>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <section id="nav-extended-menu"></section>
+         <div id="nav-shade" style="position:fixed;"></div>
+         <div id="ibm-content-wrapper">
+            <main role="main" aria-labelledby="ibm-pagetitle-h1">
+            <div id="ibm-pcon">
+               <div id="ibm-content">
+                  <div id="ibm-content-body">
+                     <div id="ibm-content-main">
+                        <div id="research_area_container" class="ibm-flex">
+                           <div class="ibm-grid-container ibm-flex__cell--1">
+                              <!-- side navigation -->
+                              <div id="research_area_left" class=" ibm-grid-col-sm-4-0  ibm-grid-col-md-8-2 ibm-grid-col-lg-16-2 ibm-flex ibm-flex--column ra_half ibm-hidden-small">
+                                 <div id="research_area_side_nav">
+                                    <p class="research_area_nav_title ibm-type-c"><a href="#overview" class="">Quantum <br/> Computing</a></p>
+                                    <div id="ra_nav_items" class="ibm-mt-6">
+                                       <p class="ibm-type-c"><a href="#overview" class="ra_link researcharea_overview_link ra_nav_items_selected">Overview</a></p>
+                                       <p class="ibm-type-c"><a href="#workstreams" class="ra_link researcharea_workstreams_link">Workstreams</a></p>
+                                       <p class="ibm-type-c"><a href="#news" class="ra_link researcharea_recentnews_link">Recent news</a></p>
+                                       <p class="ibm-type-c"><a href="#experiments" class="ra_link researcharea_experiments_link">Experiments</a></p>
+                                       <p class="ibm-type-c"><a href="#publications" class="ra_link researcharea_publications_link">Publications</a></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- main content -->
+                              <a name="overview"></a>
+                              <div class=" ibm-grid-col-sm-4-4 ibm-grid-col-md-8-6 ibm-grid-col-lg-16-14 ibm-flex ibm-flex--column ra_half">
+                                 <!-- leadspace -->
+                                 <section id="researcharea_overview">
+                                    <div class="ibm-flex">
+                                       <div class="ibm-grid-container ibm-flex__cell--1">
+                                          <div id="research_leadspace" class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                             <div class="ibm-flex">
+                                                <div class="ibm-grid-container ibm-flex__cell--1">
+                                                   <!-- left -->
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-research-padding-large ibm-hidden-small">
+                                                      <h2 class="ibm-type-i ibm-mt-6 ibm-mb-12 fade-in-bottom">What’s Next in Quantum is <span class="wn_topic text-focus-in">frictionless development</span></h2>
+                                                      <div class="leadspace_video_control">
+                                                        <p class="ibm-btn-row"><a class="ibm-type-b ibm-play-link leadspace_video_control fade-in-bottom leadspace_video_image" data-widget="videoplayer" data-videodisplay="overlay" data-overlayplayersize="xlarge" data-videoid="zOGNoDO7mcU" data-videotype="youtube" data-showvideoduration="true" href="https://www.youtube.com/watch?v=zOGNoDO7mcU">The Future of Quantum Computing</a></p>
+                                                         <img src="quantum-computing/images/leadspace_promo_banner.jpg" class="ibm-resize text-focus-in leadspace_video_image" style="max-width:75%;" data-widget="videoplayer" data-videodisplay="overlay" data-overlayplayersize="xlarge" data-videoid="zOGNoDO7mcU" data-videotype="youtube" data-showvideoduration="true" href="https://www.youtube.com/watch?v=zOGNoDO7mcU" style="cursor:pointer;"/>
+                                                      </div>
+                                                   </div>
+                                                   <!-- mobile -->
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-research-padding-large ibm-hidden-large ibm-hidden-medium ibm-hidden-xlarge">
+                                                     <h2 class="ibm-type-j ibm-mt-6 ibm-mb-6 fade-in-bottom">What’s Next in Quantum is <span class="wn_topic text-focus-in">frictionless development</span></h2>
+                                                      <div class="leadspace_video_control">
+                                                        <p class="ibm-btn-row"><a class="ibm-type-b ibm-play-link leadspace_video_control fade-in-bottom" data-widget="videoplayer" data-videodisplay="overlay" data-overlayplayersize="xlarge" data-videoid="zOGNoDO7mcU" data-videotype="youtube" data-showvideoduration="true" href="https://www.youtube.com/watch?v=zOGNoDO7mcU">The Future of Quantum Computing</a></p>
+                                                         <img src="quantum-computing/images/leadspace_promo_banner.jpg" class="ibm-resize text-focus-in" style="max-width:75%;" data-widget="videoplayer" data-videodisplay="overlay" data-overlayplayersize="xlarge" data-videoid="zOGNoDO7mcU" data-videotype="youtube" data-showvideoduration="true" href="https://www.youtube.com/watch?v=zOGNoDO7mcU" style="cursor:pointer;"/>
+                                                      </div>
+                                                      <p class="ibm-type-c ibm-mt-6 fade-in-bottom">To make quantum frictionless for everyone from developers to researchers and enthusiasts, we’re innovating across the entire stack.</p>
+                                                      <p class="ibm-type-c fade-in-bottom">We're pioneering specialized hardware and building libraries of circuits to empower researchers, developers and businesses to tap into quantum as a service through the cloud, using their preferred coding language and without having to be quantum experts themselves.</p>
+                                                      <p class="ibm-type-c fade-in-bottom">Together, we will maximize the potential of quantum through the combination of powerful technologies and open-source innovation. </p>
+                                                      <p class="ibm-btn-row ibm-mt-6 ibm-mb-2 animate fade-in-bottom fade-in-bottom"><a class="ibm-type-c ibm-forward-link" href="quantum-computing/vision.html">Read our full vision and strategy</a></p>
+                                                   </div>
+                                                   <!-- right -->
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-hidden-small">
+                                                     <p class="ibm-type-e ibm-mt-12 fade-in-bottom">To make quantum frictionless for everyone from developers to researchers and enthusiasts, we’re innovating across the entire stack.</p>
+                                                     <p class="ibm-type-e fade-in-bottom"> We're pioneering specialized hardware and building libraries of circuits to empower researchers, developers and businesses to tap into quantum as a service through the cloud, using their preferred coding language and without having to be quantum experts themselves.</p>
+                                                     <p class="ibm-type-e fade-in-bottom">Together, we will maximize the potential of quantum through the combination of powerful technologies and open-source innovation. </p>
+                                                      <p class="ibm-btn-row ibm-mt-6 animate fade-in-bottom fade-in-bottom"><a class="ibm-type-e ibm-forward-link" href="quantum-computing/vision.html">Read our full vision and strategy</a></p>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </section>
+                                 <!-- stategic teams -->
+                                 <section id="researcharea_featured">
+                                    <a name="featured"></a>
+                                    <div class="ibm-flex ibm-mt-6 ">
+                                       <div class="ibm-grid-container ibm-flex__cell--1">
+                                          <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                             <div class="ibm-flex">
+                                                <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column ibm-research-padding-large">
+                                                      <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 " style="border-top: solid 2px #000000;padding-top: 15px;width:100%;padding-left:0px;">
+                                                         <p class="ibm-type-c ibm-type-semibold fade-in-bottom ibm-mb-6">Featured</p>
+                                                         <div class="ibm-grid-container ibm-flex__cell--1">
+                                                            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8   ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 ibm-background-black-core ibm-research-padding featured_full" onclick="location.href='/';">
+                                                               <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column">
+                                                                     <img src="quantum-computing/images/featured_large.jpg" class="ibm-resize " alt="featured science project"/>
+                                                                  </div>
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ">
+                                                                     <div class="ibm-flex">
+                                                                        <div class="ibm-grid-container ibm-flex__cell--1 ibm-textcolor-white-core ibm-research-padding-large">
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-12 ibm-flex ibm-flex--column ibm-center-block">
+                                                                              <h3 class="ibm-type-h featured_full_title">
+                                                                              Build quantum circuits
+                                                                              <h3>
+                                                                              <p class="ibm-type-e"> IBM Quantum Experience provides cloud access to our quantum systems to explore and research quantum. Get started with a drag and drop interface to build circuits, view Qiskit code, and develop algorithms.</p>
+                                                                              <svg focusable="false" preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 16 16" aria-hidden="true">
+                                                                               <path d="M9.3 3.7L13.1 7.5 1 7.5 1 8.5 13.1 8.5 9.3 12.3 10 13 15 8 10 3z"></path>
+                                                                            </svg>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class=" ibm-grid-col-sm-4-0  ibm-grid-col-md-8-0 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column ibm-hidden-small ibm-hidden-medium">
+                                                                                                   <p class="ibm-btn-row  ibm-mt-2 animate fade-in-bottom" data-animate="fade-in-bottom"><a class="ibm-type-b ibm-forward-link" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-44015">Get What’s Next in quantum computing delivered to your inbox</a></p>
+                                                                                                </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                </section>
+                                 <!-- stategic teams  -->
+                                 <section id="researcharea_workstreams">
+                                    <a name="workstreams"></a>
+                                    <div class="ibm-flex ibm-mt-6">
+                                       <div class="ibm-grid-container ibm-flex__cell--1">
+                                          <div id="overview_2" class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                             <div class="ibm-flex">
+                                                <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                   <!-- left -->
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                                      <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 ibm-research-padding-large">
+                                                         <div class="ibm-flex">
+                                                            <div class="ibm-grid-container ibm-flex__cell--1 ibm-textcolor-black ibm-sameheight" data-items=".team-block " data-widget="setsameheight">
+                                                               <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8  ibm-pb-3 ibm-pt-3 ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 " style="border-top: solid 2px #000000;padding-top: 15px;width:100%;padding-left:0px;">
+                                                                  <p class="ibm-type-c ibm-type-semibold fade-in-bottom">Workstreams</p>
+                                                               </div>
+                                                               <!-- team -->
+                                                               <div tabindex="0" class="ibm-flex ibm-flex--column ibm-grid-col-md-8-4 ibm-center-block ibm-pb-3 ibm-pt-3 ibm-grid-col-lg-16-8 ibm-grid-col-sm-4-4 team-block team-border-right team-border-bottom fade-in-bottom" onclick="location.href='quantum-computing/vision.html#qis';" data-animate="fade-in-bottom">
+                                                                  <h4 class=" ibm-type-c tracking-in-expand" style="height: 22px;">Quantum Information Science</h4>
+                                                                  <p class="ibm-type-b team-desc">We're unpacking and improving the fundamental building blocks of quantum, from entanglement and superposition to the development of quantum algorithms.</p>
+                                                                  <p class="ibm-mt-4">
+                                                                     <svg class="float-right" focusable="false" preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewbox="0 0 32 32" aria-hidden="true">
+                                                                        <path d="M18 6L16.6 7.4 24.1 15 3 15 3 17 24.1 17 16.6 24.6 18 26 28 16z"></path>
+                                                                        <title>Arrow right</title>
+                                                                     </svg>
+                                                                  </p>
+                                                               </div>
+                                                               <!-- team -->
+                                                               <div tabindex="0" class="ibm-flex ibm-flex--column ibm-grid-col-md-8-4 ibm-center-block ibm-pb-3 ibm-pt-3 ibm-grid-col-lg-16-8 ibm-grid-col-sm-4-4 team-block  fade-in-bottom" onclick="location.href='quantum-computing/vision.html#hardware';" data-animate="fade-in-bottom">
+                                                                  <h4 class=" ibm-type-c tracking-in-expand" style="height: 22px;">Quantum hardware</h4>
+                                                                  <p class="ibm-type-b team-desc">We’re building state-of-the-art hardware to push the boundaries of Quantum Volume even as we expand the number of qubits in our quantum systems.</p>
+                                                                  <p class="ibm-mt-4">
+                                                                     <svg class="float-right" focusable="false" preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewbox="0 0 32 32" aria-hidden="true">
+                                                                        <path d="M18 6L16.6 7.4 24.1 15 3 15 3 17 24.1 17 16.6 24.6 18 26 28 16z"></path>
+                                                                        <title>Arrow right</title>
+                                                                     </svg>
+                                                                  </p>
+                                                               </div>
+                                                               <!-- team -->
+                                                               <div tabindex="0" class="ibm-flex ibm-flex--column ibm-grid-col-md-8-4 ibm-center-block ibm-pb-3 ibm-pt-3 ibm-grid-col-lg-16-8 ibm-grid-col-sm-4-4 team-block team-border-right team-border-top animate" onclick="location.href='quantum-computing/vision.html#software';" data-animate="fade-in-bottom">
+                                                                  <h4 class=" ibm-type-c tracking-in-expand" style="height: 22px;">Circuits and software</h4>
+                                                                  <p class="ibm-type-b team-desc">We're exploring and testing potential applications of quantum by building an expansive library of quantum circuits and creating tools that allow you to develop your own quantum software. </p>
+                                                                  <p class="ibm-mt-4">
+                                                                     <svg class="float-right" focusable="false" preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewbox="0 0 32 32" aria-hidden="true">
+                                                                        <path d="M18 6L16.6 7.4 24.1 15 3 15 3 17 24.1 17 16.6 24.6 18 26 28 16z"></path>
+                                                                        <title>Arrow right</title>
+                                                                     </svg>
+                                                                  </p>
+                                                               </div>
+                                                               <!-- team -->
+                                                               <div tabindex="0" class="ibm-flex ibm-flex--column ibm-grid-col-md-8-4 ibm-center-block ibm-pb-3 ibm-pt-3 ibm-grid-col-lg-16-8 ibm-grid-col-sm-4-4 team-block  team-border-top animate" onclick="location.href='quantum-computing/vision.html#community';" data-animate="fade-in-bottom">
+                                                                  <h4 class=" ibm-type-c tracking-in-expand" style="height: 22px;">Quantum community</h4>
+                                                                  <p class="ibm-type-b team-desc">We’re putting our tools in the hands of developers, researchers, and business professionals around the world to harness the power of open-source innovation. </p>
+                                                                  <p class="ibm-mt-4">
+                                                                     <svg class="float-right" focusable="false" preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewbox="0 0 32 32" aria-hidden="true">
+                                                                        <path d="M18 6L16.6 7.4 24.1 15 3 15 3 17 24.1 17 16.6 24.6 18 26 28 16z"></path>
+                                                                        <title>Arrow right</title>
+                                                                     </svg>
+                                                                  </p>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- right -->
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </section>
+                                 <!-- end overview -->
+                                 <!-- news -->
+                                 <section id="researcharea_recentnews">
+                                    <a name="news"></a>
+                                    <div class="ibm-flex ibm-mt-6 ">
+                                       <div class="ibm-grid-container ibm-flex__cell--1">
+                                          <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                             <div class="ibm-flex">
+                                                <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column ibm-research-padding-large">
+                                                      <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 " style="border-top: solid 2px #000000;padding-top: 15px;width:100%;padding-left:0px;">
+                                                         <p class="ibm-type-c ibm-type-semibold fade-in-bottom ibm-mb-6">Recent news</p>
+                                                         <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                            <div class="ibm-flex">
+                                                               <div class="ibm-grid-container ibm-flex__cell--1" data-widget="setsameheight" data-items=".recent-news-item">
+                                                                  <!-- news item -->
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-mb-2">
+                                                                     <div class="recent-news-item" onclick="location.href='https://www.ibm.com/blogs/research/2021/02/quantum-phase-estimation/';">
+                                                                        <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-5 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column">
+                                                                              <div class="ibm-research-padding">
+                                                                                 <svg width="25" height="25" viewbox="0 0 32 32" fill="#000000" xmlns="http://www.w3.org/2000/svg" role="img">
+                                                                                    <path d="M14.016 24.2h-10v2h10v-2zM14.016 18.2h-10v2h10v-2zM26.016 14.2h-20c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h20c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2zm-20-8v6h20v-6h-20zM26.016 28.2h-6c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2zm-6-8v6h6v-6h-6z"></path>
+                                                                                 </svg>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mb-6 animate" data-animate="fade-in-bottom">Blog</p>
+                                                                                 <img src="quantum-computing/images/recent_news_1.jpg" class="ibm-resize ibm-mb-6 ibm-hidden-large ibm-hidden-xlarge ibm-hidden-medium " alt="Quantum circuits get a dynamic upgrade with the help of concurrent classical computation"/>
+                                                                                 <p class="ibm-type-e recent-news-title animate" data-animate="fade-in-bottom">Quantum circuits get a dynamic upgrade with the help of concurrent classical computation</p>
+                                                                                 <br/>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mt-2 animate" data-animate="fade-in-bottom">4-Feb-2021</p>
+                                                                              </div>
+                                                                           </div>
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-flex ibm-flex--column" style="padding-right:35px;padding-top:25px">
+                                                                              <img src="quantum-computing/images/recent_news_1.jpg" class="ibm-resize ibm-hidden-small " alt="Quantum circuits get a dynamic upgrade with the help of concurrent classical computation"/>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <!-- news item -->
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-mb-2">
+                                                                     <div class="recent-news-item" onclick="location.href='https://www.ibm.com/blogs/research/2020/12/quantum-advantage-derivative-pricing/';">
+                                                                        <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-5 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column">
+                                                                              <div class="ibm-research-padding">
+                                                                                 <svg width="25" height="25" viewbox="0 0 32 32" fill="#000000" xmlns="http://www.w3.org/2000/svg" role="img">
+                                                                                    <path d="M14.016 24.2h-10v2h10v-2zM14.016 18.2h-10v2h10v-2zM26.016 14.2h-20c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h20c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2zm-20-8v6h20v-6h-20zM26.016 28.2h-6c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2zm-6-8v6h6v-6h-6z"></path>
+                                                                                 </svg>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mb-6 animate" data-animate="fade-in-bottom">Blog</p>
+                                                                                 <img src="quantum-computing/images/recent_news_2.jpg" class="ibm-resize ibm-mb-6 ibm-hidden-large ibm-hidden-xlarge ibm-hidden-medium " alt="Hardware-aware approach for fault-tolerant quantum computation"/>
+                                                                                 <p class="ibm-type-e recent-news-title animate" data-animate="fade-in-bottom">Goldman Sachs & IBM researchers estimate quantum advantage for derivative pricing</p>
+                                                                                 <br/>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mt-2 animate" data-animate="fade-in-bottom">17-Dec-2020</p>
+                                                                              </div>
+                                                                           </div>
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-flex ibm-flex--column" style="padding-right:35px;padding-top:25px">
+                                                                              <img src="quantum-computing/images/recent_news_2.jpg" class="ibm-resize ibm-hidden-small " alt="Hardware-aware approach for fault-tolerant quantum computation"/>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <!-- FEATURED news item -->
+                                                                  <div class="ibm-research-padding">
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column animate ibm-mb-2" data-animate="text-focus-in" style="background-image:url(quantum-computing/images/recent_news_feature.jpg);background-size:cover;background-position:center center;">
+                                                                        <div class="ibm-flex ibm-mt-12 ibm-mb-12">
+                                                                           <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                              <div class="ibm-research-padding">
+                                                                                 <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-6 ibm-grid-col-lg-16-7 ibm-flex ibm-flex--column ibm-center-block ibm-background-white-core recent_news_feature" onclick="location.href='https://www.ibm.com/blogs/research/2021/02/quantum-development-roadmap/';" style="cursor:pointer;">
+                                                                                    <div class="ibm-background-white-core ibm-research-padding">
+                                                                                       <h3 class="ibm-type-f ibm-textcolor-black-core recent-news-title ibm-mb-12 animate" data-animate="fade-in-bottom">IBM’s roadmap for building an open quantum software ecosystem</h3>
+                                                                                       <p class="ibm-btn-row animate" data-animate="fade-in-bottom"><a class="ibm-type-b ibm-forward-link">Read blog</a></p>
+                                                                                       <div>
+                                                                                          <img src="quantum-computing/images/recent_news_feature_small.jpg" class="ibm-resize " style="cursor:pointer;"/>
+                                                                                          <p class="ibm-type-a ibm-textcolor-black-core ibm-mt-2 animate" data-animate="fade-in-bottom" style="float:right">4-Feb-2021</p>
+                                                                                       </div>
+                                                                                    </div>
+                                                                                 </div>
+                                                                              </div>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <!-- news item -->
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-mb-4">
+                                                                     <div class="recent-news-item" onclick="location.href='https://www.ibm.com/blogs/research/2021/01/quantum-mean-values/';">
+                                                                        <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-5 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column">
+                                                                              <div class="ibm-research-padding">
+                                                                                 <svg width="25" height="25" viewbox="0 0 32 32" fill="#000000" xmlns="http://www.w3.org/2000/svg" role="img">
+                                                                                    <path d="M14.016 24.2h-10v2h10v-2zM14.016 18.2h-10v2h10v-2zM26.016 14.2h-20c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h20c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2zm-20-8v6h20v-6h-20zM26.016 28.2h-6c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2zm-6-8v6h6v-6h-6z"></path>
+                                                                                 </svg>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mb-6 animate" data-animate="fade-in-bottom">Blog</p>
+                                                                                 <img src="quantum-computing/images/recent_news_3.jpg" class="ibm-resize ibm-mb-6 ibm-hidden-large ibm-hidden-xlarge ibm-hidden-medium " alt="Quantum Conundrum"/>
+                                                                                 <p class="ibm-type-e recent-news-title animate" data-animate="fade-in-bottom">Setting the bar for variational quantum algorithms using high-performance classical simulations</p>
+                                                                                 <br/>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mt-2 animate" data-animate="fade-in-bottom">25-Jan-2021</p>
+                                                                              </div>
+                                                                           </div>
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-flex ibm-flex--column" style="padding-right:35px;padding-top:25px">
+                                                                              <img src="quantum-computing/images/recent_news_3.jpg" class="ibm-resize ibm-hidden-small " alt="Quantum Conundrum"/>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <!-- newsletter item -->
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column ibm-mb-4 ">
+                                                                     <div class="recent-news-item" style="background:#A7F0BA" onclick="location.href='https://www.ibm.com/account/reg/us-en/signup?formid=urx-42325';">
+                                                                        <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                           <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                                                              <div class="ibm-research-padding">
+                                                                                 <svg focusable="false" preserveaspectratio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewbox="0 0 32 32" aria-hidden="true"><path d="M27.71,4.29a1,1,0,0,0-1.05-.23l-22,8a1,1,0,0,0,0,1.87l9.6,3.84,3.84,9.6A1,1,0,0,0,19,28h0a1,1,0,0,0,.92-.66l8-22A1,1,0,0,0,27.71,4.29ZM19,24.2l-2.79-7L21,12.41,19.59,11l-4.83,4.83L7.8,13,25.33,6.67Z"></path><title>Send alt</title></svg>
+                                                                                 <p class="ibm-type-a ibm-textcolor-black-core ibm-mb-6 animate" data-animate="fade-in-bottom">Newsletter</p>
+                                                                                 <p class="ibm-type-g recent-news-title animate" data-animate="fade-in-bottom">Get the latest quantum computing news in your inbox each month</p>
+                                                                                 <br/><br/>
+                                                                                 <p><a class="  bx--btn bx--btn--secondary animate" data-animate="fade-in-bottom" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-42325" target="blank" style="color:#ffffff !important;" type="button">Sign up </a></p>
+                                                                              </div>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                                                     <p class="ibm-btn-row ibm-mt-2 animate" data-animate="fade-in-bottom" style="min-width:100%"><a class="ibm-type-b ibm-forward-link" href="blog_tag_quantum.html">Discover more quantum computing research news at our blog</a></p>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </section>
+                                 <!-- end news -->
+                                 <!-- experiments -->
+                                 <section id="researcharea_experiments">
+                                    <a name="experiments"></a>
+                                    <div class="ibm-flex ibm-mt-6 ">
+                                       <div class="ibm-grid-container ibm-flex__cell--1">
+                                          <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                             <div class="ibm-flex">
+                                                <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column ibm-research-padding-large">
+                                                      <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 " style="border-top: solid 2px #000000;padding-top: 15px;width:100%;padding-left:0px;">
+                                                         <p class="ibm-type-c ibm-type-semibold fade-in-bottom ibm-mb-6">Experiments</p>
+                                                         <!-- start experiments container -->
+                                                         <!-- experiment 1 -->
+                                                         <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                                            <div class="ibm-grid-container ibm-flex__cell--1">
+                                                               <div class="ibm-flex" style="border-top:solid 1px #C1C7CD;">
+                                                                  <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-6 ibm-grid-col-lg-16-12 ibm-flex ibm-flex--column">
+                                                                        <p class="ibm-type-g ibm-mt-2 ibm-mb-6 experiment-feature animate" data-animate="fade-in-bottom" data-image="experiments1"><a href="https://www.ibm.com/quantum-computing/technology/experience/">IBM Quantum Experience is quantum on the cloud</a></p>
+                                                                     </div>
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-4 ibm-flex ibm-flex--column">
+                                                                        <p class="ibm-type-b ibm-mt-2 ibm-mb-2 animate" data-animate="fade-in-bottom" style="color:#697077">Accelerate your research and applications with the next generation of the leading quantum cloud services and software platform. </p>
+                                                                        <p class="ibm-btn-row ibm-mt-2 animate" data-animate="fade-in-bottom"><a class="ibm-type-b ibm-forward-link" href="https://www.ibm.com/quantum-computing/technology/experience/">Access</a></p>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                               <!-- experiment 2 -->
+                                                               <div class="ibm-flex" style="border-top:solid 1px #C1C7CD;">
+                                                                  <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-12 ibm-flex ibm-flex--column">
+                                                                        <p class="ibm-type-g ibm-mt-2 ibm-mb-6 experiment-feature animate" data-animate="fade-in-bottom" data-image="experiments2"><a href="https://qiskit.org/">Qiskit : An Open-Source Quantum Development SDK <br/></a></p>
+                                                                     </div>
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-4 ibm-flex ibm-flex--column">
+                                                                        <p class="ibm-type-b ibm-mt-2 ibm-mb-2 animate" data-animate="fade-in-bottom" style="color:#697077">Qiskit [kiss-kit] is an open source SDK for working with quantum computers at the level of pulses, circuits and algorithms.</p>
+                                                                        <p class="ibm-btn-row ibm-mt-2 animate" data-animate="fade-in-bottom"><a class="ibm-type-b ibm-forward-link" href="https://qiskit.org/">Explore</a></p>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                               <!-- experiment 3 -->
+                                                               <div class="ibm-flex" style="border-top:solid 1px #C1C7CD;border-bottom:solid 1px #C1C7CD;">
+                                                                  <div class="ibm-grid-container ibm-flex__cell--1">
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-12 ibm-flex ibm-flex--column">
+                                                                        <p class="ibm-type-g ibm-mt-2 ibm-mb-6 experiment-feature animate" data-animate="fade-in-bottom" data-image="experiments3"><a href="https://www.ibm.com/quantum-computing/technology/simulator">Simulate quantum behavior using classical hardware</a><br/></p>
+                                                                     </div>
+                                                                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-4 ibm-flex ibm-flex--column">
+                                                                        <p class="ibm-type-b ibm-mt-2 ibm-mb-2 animate" data-animate="fade-in-bottom" style="color:#697077">Test and optimize any circuits and solutions on IBM's high-performance simulators locally or on the cloud, and compare them to real quantum devices in a streamlined environment.</p>
+                                                                        <p class="ibm-btn-row ibm-mt-2 animate" data-animate="fade-in-bottom"><a class="ibm-type-b ibm-forward-link" href="https://www.ibm.com/quantum-computing/technology/simulator">Access</a></p>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- end experiments container -->
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </section>
+                                 <!-- end experiments -->
+                                 <!-- publications -->
+                                 <section id="researcharea_publications">
+                                    <a name="publications"></a>
+                                    <div class="ibm-flex ibm-mt-12 ">
+                                       <div class="ibm-grid-container ibm-flex__cell--1">
+                                          <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                             <div class="ibm-flex">
+                                                <div class="ibm-grid-container ibm-flex__cell--1 ">
+                                                   <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column ibm-research-padding-large">
+                                                      <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4 " style="border-top: solid 2px #000000;padding-top: 15px;width:100%;padding-left:0px;">
+                                                         <p class="ibm-type-c ibm-type-semibold fade-in-bottom ibm-mb-6">Featured publications</p>
+                                                         <!-- start paper container -->
+                                                         <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-8 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column" style="padding-left:0px;padding-right:0px;width:100%;">
+                                                            <!-- paper table -->
+                                                            <table data-scrollaxis="x" class="recent_pubs_table ibm-data-table" cellspacing="0" cellpadding="0" border="0" style="width:100%">
+                                                               <thead>
+                                                                  <tr class="animate fade-in-bottom" data-animate="fade-in-bottom" style="background-color:#21272a;color:#ffffff;">
+                                                                     <th scope="col"><span class=" ibm-type-c ibm-type-normal">Date</span></th>
+                                                                     <th scope="col" class="ibm-hidden-small"><span class=" ibm-type-c ibm-hidden-small">Content</span></th>
+                                                                     <th scope="col"><span class="ibm-type-c">Title</span></th>
+                                                                     <th scope="col" nowrap><span class="ibm-type-c">Journal / Venue</span></th>
+                                                                  </tr>
+                                                               </thead>
+                                                               <tbody id="recent_publication_container" style="">
+                                                                 <tr class="animate fade-in-bottom" data-animate="fade-in-bottom" onclick="location.href='https://arxiv.org/abs/2102.01682'">
+                                                                    <td class="nowrap" scope="row">Feb 2021</td>
+                                                                    <td class="ibm-type-c ibm-hidden-small">Paper </td>
+                                                                    <td>
+                                                                       <p class="ibm-type-f ibm-pb-2 pub_title">Exploiting dynamic quantum circuits in a quantum algorithm with superconducting qubits</p>
+                                                                    </td>
+                                                                    <td class="ibm-type-c ">arXiv </td>
+                                                                 </tr>
+                                                                  <tr class="animate fade-in-bottom" data-animate="fade-in-bottom" onclick="location.href='https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.011022'">
+                                                                     <td class="nowrap" scope="row">Sept 2020</td>
+                                                                     <td class="ibm-type-c ibm-hidden-small">Paper </td>
+                                                                     <td>
+                                                                        <p class="ibm-type-f ibm-pb-2 pub_title">Topological and Subsystem Codes on Low-Degree Graphs with Flag Qubits</p>
+                                                                     </td>
+                                                                     <td class="ibm-type-c ">Physical Review X </td>
+                                                                  </tr>
+                                                                  <tr class="animate fade-in-bottom alt_pubs_bg" data-animate="fade-in-bottom" onclick="location.href='https://www.nature.com/articles/s41467-020-15724-9'">
+                                                                     <td nowrap scope="row">June 2020</td>
+                                                                     <td class="ibm-type-c ibm-hidden-small">Paper </td>
+                                                                     <td>
+                                                                        <p class="ibm-type-f ibm-pb-2 pub_title">Fermionic neural-network states for ab-initio electronic structure</p>
+                                                                     </td>
+                                                                     <td class="ibm-type-c "> Nature Communications</td>
+                                                                  </tr>
+                                                                  <tr class="animate fade-in-bottom" data-animate="fade-in-bottom" onclick="location.href='https://science.sciencemag.org/content/366/6464/509'">
+                                                                     <td nowrap scope="row">Jan 2020</td>
+                                                                     <td class="ibm-type-c ibm-hidden-small">Paper </td>
+                                                                     <td>
+                                                                        <p class="ibm-type-f ibm-pb-2 pub_title">Coherent spin manipulation of individual atoms on a surface</p>
+                                                                     </td>
+                                                                     <td class="ibm-type-c ">Science</td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </div>
+                                                         <!-- paper table end -->
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </section>
+                                 <!-- end publications -->
+                                 <!-- right content above here -->
+                              </div>
+                           </div>
+                           <!-- end of right column -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section id="bottom_feature" class="ibm-mt-12 ibm-background-black-core" style="background-image:url(quantum-computing/images/bottom_promo_bg.jpg);background-size:cover;background-position:center left;">
+         <div class="ibm-grid-container ibm-flex__cell--1 ibm-pb-6" style="">
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-0 ibm-grid-col-sm-4-0 ibm-grid-col-lg-16-2"></div>
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-2 ibm-grid-col-sm-4-4 ibm-grid-col-lg-16-14 ibm-mt-4 ibm-research-padding-large">
+               <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-8   ibm-grid-col-lg-16-16 ibm-grid-col-sm-4-4  ibm-research-padding blur_background">
+                  <div class="ibm-grid-container ibm-flex__cell--1 ">
+                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column">
+                        <img src="quantum-computing/images/bottom_promo_mini.jpg" class="ibm-resize " alt="ibm circuit board"/>
+                     </div>
+                     <div class=" ibm-grid-col-sm-4-4  ibm-grid-col-md-8-4 ibm-grid-col-lg-16-8 ibm-flex ibm-flex--column">
+                        <div class="ibm-flex">
+                           <div class="ibm-grid-container ibm-flex__cell--1 ibm-textcolor-black-core">
+                              <div class=" ibm-grid-col-sm-4-4 ibm-center-block ibm-grid-col-md-8-4 ibm-grid-col-lg-16-16 ibm-flex ibm-flex--column">
+                                 <h3 class="ibm-type-f ibm-mt-2">
+                                   IBM Quantum Network: an engine for discovery
+                                 <h3>
+                                 <p class="ibm-type-c">IBM Quantum Network is a community of Fortune 500 companies, academic institutions, startups and national research labs working with IBM to advance quantum computing.</p>
+                                 <p class="ibm-btn-row ibm-mt-6 animate fade-in-bottom fade-in-bottom"><a class="ibm-type-c ibm-forward-link" href="https://www.ibm.com/quantum-computing/network/overview/">Learn more</a></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="ibm-research-footer" class="ibm-mt-0">
+         <div class="ibm-grid-container ibm-flex__cell--1 ibm-pb-6" style="">
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-0 ibm-grid-col-sm-4-0 ibm-grid-col-lg-16-2"></div>
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-2 ibm-grid-col-sm-4-4 ibm-grid-col-lg-16-4">
+               <p class="ibm-type-b ibm-type-semibold ibm-pt-6">Focus areas</p>
+               <a href="hybrid-cloud/lnk_footer.html" class="ibm-type-light ibm-mb-2 ibm-type-b  ibm-pb-0">Hybrid Cloud</a>
+               <a href="artificial-intelligence/lnk_footer.html" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0 ">Artificial Intelligence</a>
+               <a href="quantum-computing/lnk_footer.html" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0  ">Quantum Computing</a>
+               <a href="science/lnk_footer.html" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0  ">Science</a>
+            </div>
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-2 ibm-grid-col-sm-4-4 ibm-grid-col-lg-16-4">
+               <p class="ibm-type-b ibm-type-semibold ibm-pt-6">Quick links</p>
+               <a href="https://www.draco.res.ibm.com/experiments" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0 ">Experiments</a>
+               <a href="https://www.ibm.com/employment/#jobs?job-category=Research" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0  ">Careers</a>
+               <a href="https://www.draco.res.ibm.com/collaborate-with-us" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0  ">Collaborate with us</a>
+               <a href="https://www.draco.res.ibm.com/about" class="ibm-type-light ibm-mb-2 ibm-type-b  ibm-pb-0  ">About us</a>
+               <a href="blog.html" class="ibm-type-light ibm-mb-2 ibm-type-b ibm-pb-0 ">Blog</a>
+            </div>
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-2 ibm-grid-col-sm-4-4 ibm-grid-col-lg-16-2">
+               <p class="ibm-type-b ibm-type-semibold ibm-pt-6">Social</p>
+               <a href="https://twitter.com/ibmresearch" class="ibm-icon-nolink ibm-mb-6 ibm-pb-0  " target="blank"><span class="ibm-twitter-link"></span></a>
+               <a href="https://www.youtube.com/user/IBMLabs" class="ibm-icon-nolink ibm-mb-6 ibm-pb-0  " target="blank"><span class="ibm-youtube-link"></span></a>
+               <a href="https://www.linkedin.com/showcase/ibm-research/" class="ibm-icon-nolink ibm-mb-6 ibm-pb-0  " target="blank"><span class="ibm-linkedin-link"></span></a>
+            </div>
+            <div class="ibm-flex ibm-flex--column ibm-grid-col-md-8-2 ibm-grid-col-sm-4-4 ibm-grid-col-lg-16-4">
+               <p class="ibm-type-f ibm-type-light ibm-pt-6">Get our latest research news in your inbox.</p>
+               <p><a class="bx--btn bx--btn--primary" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-44015" target="blank" type="button">Sign up </a></p>
+            </div>
+         </div>
+      </section>
+      <div id="ibm-footer-module"></div>
+      <footer aria-label="IBM">
+         <div id="ibm-footer">
+            <ul>
+               <li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+               <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+               <li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+               <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+            </ul>
+         </div>
+      </footer>
+      </div>
+      <div class="experiment-logo" style="z-index:0 !important;"><img class="str_exp_img" src="http://chdbennett.github.io/work_site/quantum-computing/" alt="experiment"></div>
+   </body>
+   <script>
+      jQuery( window ).scroll(function() {
+        jQuery("#research_area_container" ).addClass( "adjustcontainer" );
+      });
+   </script>
+   <script src="js/research-area_wn_ws.js"></script>
+   <script src="js/ibm-research-scripts_wn.js"></script>
+   <script src="js/ibm-research-navigation_wn.js"></script>
+</html>

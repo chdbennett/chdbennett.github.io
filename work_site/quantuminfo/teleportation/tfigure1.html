@@ -1,0 +1,71 @@
+%!
+% TELEPORT.PS   1992.12.01/10   Quantum teleportation (revised version)
+190 300 translate % .51 dup scale % for width of PRL column
+/sinewave                       % from 0 0 to 10 0
+ {gsave currentpoint translate
+ newpath 0 0 moveto
+ 5 3.5 5 -3.5 10 0 curveto
+ stroke grestore} def
+/phi { moveto (|f) show
+  gsave .9 dup scale (\361) show grestore} def
+ .6 setlinewidth
+gsave                         % phi particle
+35 rotate
+2 {180 rotate 70 0 moveto
+ 7 {10 0 rmoveto sinewave} repeat } repeat
+ newpath -70 1.5 moveto 70 1.5 lineto            % 2 bits from A to B
+ -70 -1.5 moveto 70 -1.5 lineto stroke
+ gsave 70 0 translate 110 rotate        % 2 bits remain forever
+  newpath 0 1.5 moveto 80 1.5 lineto
+  0 -1.5 moveto 80 -1.5 lineto stroke
+ grestore
+ newpath [ 2 2 ] 2 setdash            % EPR to A
+ -70 0 moveto -55 -70 lineto stroke
+  newpath [ 5 2 ] 0 setdash           % EPR to B
+ 70 0 moveto -55 -70 lineto stroke
+ [] 0 setdash 1 setlinewidth           % two circles
+ 2 { 180 rotate newpath 70 0 15 0 360 arc
+    gsave 1 setgray fill grestore stroke } repeat
+grestore
+/Symbol findfont 18 scalefont setfont
+112 94 phi -130 -102 phi
+/Times-Roman findfont 18 scalefont setfont
+-45 94 moveto (Two bits) show
+-40 -102 moveto (EPR pair) show
+/Times-Roman findfont 20 scalefont setfont
+-64 -45 moveto (A) show
+52 34 moveto (B) show
+-130 0 moveto 2 0 ((a)) ashow
+%
+220 0 translate               % second part of figure
+gsave
+35 rotate
+ -70 0 moveto                            % intermediate phi
+ 14 {10 0 rmoveto sinewave} repeat
+ newpath -70 1.5 moveto -145 1.5 lineto       % 2 bits to B
+ -70 -1.5 moveto -145 -1.5 lineto
+ gsave -70 0 translate 110 rotate        % 2 bits remain forever %R
+  newpath 0 1.5 moveto 70 1.5 lineto                             %R
+  0 -1.5 moveto 70 -1.5 lineto stroke                            %R
+ grestore                                                        %R
+ 70 1.5 moveto 150 1.5 lineto                 % 2 bits from A
+ 70 -1.5 moveto 150 -1.5 lineto stroke
+ newpath [ 2 2 ] 2 setdash                % EPR to A
+ -70 0 moveto -55 -70 lineto stroke
+  newpath [ 5 2 ] 0 setdash           % EPR to B
+ 70 0 moveto -55 -70 lineto stroke
+ [] 0 setdash 1 setlinewidth           % two circles
+ 2 { 180 rotate newpath 70 0 15 0 360 arc
+    gsave 1 setgray fill grestore stroke } repeat
+grestore
+/Symbol findfont 18 scalefont setfont
+%-12 13 phi     % phi  label for modlulated particle
+/Times-Roman findfont 18 scalefont setfont
+63 94 moveto (Two bits) show
+-140 -102 moveto (Two bits) show
+-40 -102 moveto (EPR pair) show
+/Times-Roman findfont 20 scalefont setfont
+-64 -46 moveto (B) show
+51 35 moveto (A) show
+100 0 moveto 2 0 ((b)) ashow
+showpage

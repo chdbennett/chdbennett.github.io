@@ -1,0 +1,59 @@
+%!
+% QQ.TP   1993.01.24   Quantum quadruplexing with teleportation
+300 400 translate % .51 dup scale % for width of PRL column
+/sinewave                       % from 0 0 to 10 0
+ {gsave currentpoint translate
+ newpath 0 0 moveto
+ 5 3.5 5 -3.5 10 0 curveto
+ stroke grestore} def
+ .6 setlinewidth
+gsave                         % inner part of figure (teleportation)
+35 rotate
+2 {180 rotate 70 0 moveto                      % phi particle
+ 6 {10 0 rmoveto sinewave} repeat } repeat
+ newpath -70 1.5 moveto 70 1.5 lineto            % 2 bits from A to B
+ -70 -1.5 moveto 70 -1.5 lineto stroke
+ gsave 70 0 translate 110 rotate        % 2 bits remain forever
+  newpath 0 1.5 moveto 70 1.5 lineto
+  0 -1.5 moveto 70 -1.5 lineto stroke
+ grestore
+ newpath [ 2 2 ] 2 setdash            % EPR to A
+ -70 0 moveto -35 -50 lineto stroke
+  newpath [ 5 2 ] 0 setdash           % EPR to B
+ 70 0 moveto -35 -50 lineto stroke
+ [] 0 setdash 1 setlinewidth           % two circles
+ 2 { 180 rotate newpath 70 0 15 0 360 arc
+    gsave 1 setgray fill grestore stroke } repeat
+grestore
+/Times-Roman findfont 18 scalefont setfont
+-37 -75 moveto (EPR-2) show
+/Times-Roman findfont 20 scalefont setfont
+-65 -46 moveto -4 3 (A) ashow
+/Courier findfont 18 scalefont setfont (') show
+/Times-Roman findfont 20 scalefont setfont
+50 33 moveto -3 3 (B) ashow
+/Courier findfont 18 scalefont setfont (') show
+gsave                               % second part of figure
+35 rotate
+ newpath -130 1.5 moveto -205 1.5 lineto       % 2 bits to B
+ -130 -1.5 moveto -205 -1.5 lineto
+ gsave -130 0 translate 110 rotate        % 2 bits remain forever
+  newpath 0 1.5 moveto 70 1.5 lineto
+  0 -1.5 moveto 70 -1.5 lineto stroke
+ grestore
+ 130 1.5 moveto 200 1.5 lineto                 % 2 bits from A
+ 130 -1.5 moveto 200 -1.5 lineto stroke
+ newpath [ 2 2 ] 2 setdash                % EPR to B
+ -130 0 moveto -65 -99 lineto stroke
+  newpath [ 5 2 ] 0 setdash           % EPR to A
+ 130 0 moveto -65 -99 lineto stroke
+ [] 0 setdash 1 setlinewidth           % two circles
+ 2 { 180 rotate newpath 130 0 15 0 360 arc
+    gsave 1 setgray fill grestore stroke } repeat
+grestore
+/Times-Roman findfont 18 scalefont setfont
+ 14 -118 moveto (EPR-1) show
+/Times-Roman findfont 20 scalefont setfont
+-112 -80 moveto (B) show
+100 70 moveto (A) show
+showpage

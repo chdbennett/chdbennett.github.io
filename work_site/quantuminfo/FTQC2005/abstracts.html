@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>abstracts.html</title>
+</head>
+<body>
+<a name="gottesman"><font face="Arial" size="4"><em></em></font>Daniel Gottesman</a><br>
+<span style="font-weight: bold;">Title: </span>A Simple Proof of the Threshold for 
+Fault-Tolerant Quantum Computation<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>
+One of the central critical results in the theory of fault-tolerant
+quantum computation is that arbitrarily long reliable computation is
+possible provided the error rate per gate and per time step is below
+some threshold value.  This was proved by a number of groups, but the
+detailed published proofs are complex and furthermore only hold for
+concatenation of quantum error-correcting codes able to correct 2 errors
+per block, while typically the best estimates of the threshold value are
+based on the 7-qubit code, which only corrects 1 error per block.  I
+will describe recent work by Panos Aliferis, John Preskill, and myself
+which substantially simplifies existing proofs and applies as well to
+the concatenated 7-qubit code.  The new proof also provides a nice
+framework in which to attempt to prove relatively high values of the
+threshold, which so far have only emerged as estimates from simulations
+of fault-tolerant circuits.
+<hr>
+<a name="knill"><font face="Arial" size="4"><em></em></font>Emmanuel Knill</a><br>
+<span style="font-weight: bold;">Title: </span>Fault-tolerant architecture for very 
+noisy gates<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>
+I describe some of the features of a scheme for
+quantum computing with gates having probabilistic and independent
+Pauli error probabilities of the order of 1% per gate.
+<hr>
+<a name="roychowdhury"><font face="Arial" size="4"><em></em></font>Vwani Roychowdhury</a><br> <span style="font-weight: bold;">Title: </span>Fault-Tolerant Algorithmic
+Complexity in near-neighbor quantum computers<br> <br> <span style="font-weight: bold;">Abstract: </span> We will discuss
+fault-tolerant architectures, related thresholds, and algorithmic
+complexity as they relate to near-neighbor quantum computers.  In
+particular, we will discuss the computation of a threshold for
+fault-tolerant quantum computation in near-neighbor architectures, and
+also address the complexity issues involved in implementing quantum
+algorithms (e.g., the factorization algorithm).
+<br><br> 
+The talk will be based on recent joint work with P. O. Boykin, T.
+Szkopek, H. Fan, and E. Yablonovitch.
+<hr>
+<a name="svore">Krysta Svore</a><br> <span style="font-weight:
+bold;">Title:</span> Local fault-tolerant quantum computation<br> <br>
+<span style="font-weight: bold;">Abstract: </span> We analyze and
+study the effects of locality on the fault-tolerance threshold for
+quantum computation. We analytically estimate how the threshold will
+depend on a scale parameter r which estimates the scale-up in the size
+of the circuit due to encoding. We carry out a detailed semi-numerical
+threshold analysis for concatenated coding using the 7-qubit CSS code
+in the local and `nonlocal' setting. First, we find that the threshold
+in the local model for the [[7,1,3]] code has a 1/r dependence, which
+is in correspondence with our analytical estimate. Second, the
+threshold, beyond the 1/r dependence, does not depend too strongly on
+the noise levels for transporting qubits. Beyond these results, we
+find that it is important to look at more than one level of
+concatenation in order to estimate the threshold and that it may be
+beneficial in certain places, like in the transportation of qubits, to
+do error correction only infrequently.  
+<hr>
+<a name="lidar">Daniel Lidar</a><br>
+<span style="font-weight: bold;">Title: </span>Fault-tolerant quantum
+dynamical decoupling<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>We have recently
+introduced time-concatenated dynamical decoupling
+pulse sequences. Numerical and analytical results show that these
+pulse sequences are remarkably robust against both systematic and
+random control errors, thus exhibiting a rudimentary form of
+fault-tolerance. They super-polynomially outperform standard, periodic
+dynamical decoupling pulse sequences at equal cost, in the
+non-Markovian regime in which they apply. I will describe these
+results (with Kaveh Khodjasteh) in this talk. Time permitting, I will
+also present very recent results (with Robert Alicki and Paolo
+Zanardi) that point to possible internal inconsistencies in the
+fundamental assumptions entering into the theory of fault-tolerant
+quantum error correction for Markovian noise.
+<hr>
+<a name="aliferis">Panos Aliferis</a><br>
+<span style="font-weight: bold;">Title: </span>Quantum accuracy 
+threshold for concatenated distance-2 codes<br><br>
+<span style="font-weight: bold;">Abstract: </span>
+I will present joint work with Daniel Gottesman and John
+Preskill for obtaining a proof of the threshold theorem that applies
+to concatenated error-detecting codes. This proof, in conjunction with
+the post-selected fault-tolerant architecture recently introduced by
+Knill, will allow us to establish rigorous lower bounds on the
+threshold for adversarial stochastic noise of the order of 10^{-3}.
+<hr>
+<a name="haselgrove">Henry Haselgrove</a><br>
+<span style="font-weight: bold;">Title: </span>Noise thresholds 
+for optical quantum computers<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>
+I shall report on the joint work with Christopher Dawson and
+Michael Nielsen, to find the noise threshold for optical quantum computing.
+We are considering the recent proposal for combining aspects of the original
+KLM linear-optical scheme with that of the cluster-state model of quantum
+computation. I will describe how one may go about designing an efficient
+optical cluster-state error-correction protocol that is resistant to the
+combined effects of photon loss, qubit depolarisation, and inherent
+nondeterminism of two-qubit interactions. Threshold results based on
+numerical simulations will be given.
+<hr>
+<a name="taylor">Jacob Taylor</a><br>
+<span style="font-weight: bold;">Title: </span>Fault-tolerant architecture for quantum 
+computation using electrically controlled semiconductor spins<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>
+Recently, coherent manipulation of solid-state quantum bits,
+analogous to well developed realisations in atomic physics, was
+experimentally demonstrated. However, achieving fault tolerant
+quantum computation entails significant mitigation of environmental
+couplings, which is particularly challenging in the solid-state. We
+develop a scalable architecture for solid-state quantum computation
+based on actively protected two electron spin states in quantum dots.
+Specifically, we find a universal set of gates for two-spin states
+that can be implemented using only local electrical control, with
+explicit suppression of hyperfine interactions, the dominant source
+of error. The architecture allows for a modular, hierarchical design,
+and includes autonomous control and non-local coupling using
+controlled electron transport. We present detailed analysis of
+quantum error correction for this architecture, and find that fault-
+tolerant operation appears to be achievable with present experimental
+methods and parameters.  <p>The work presented is part of a
+collaboration with H.-A. Engel (Harvard), W. Duer (Innsbruck), A.
+Yacoby (Weizmann), C. M. Marcus (Harvard), and P. Zoller (Innsbruck).
+<hr> 
+<a name="cross">Andrew Cross</a><br>
+<span style="font-weight: bold;">Title:</span> Accuracy threshold and architecture for 
+trapped-ion quantum computers<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>
+Recent experiments have demonstrated the required elements for
+quantum computing with trapped atomic ions. I will present a
+fault-tolerant system architecture that integrates these elements.
+The architecture is based on an array of linear traps through which
+ions move ballistically. Timescales for movement, gates, and
+measurement are related to physical limits. Networks using the
+[[7,1,3]] code are layed out to reduce communication distance and
+idle time. Finally, I will present an accuracy threshold for this
+architecture. 
+<p>This is joint work with Tzvetan Metodiev and Isaac Chuang.
+<hr>
+<a name="silva">Marcus Silva</a><br>
+<span style="font-weight: bold;">Title:</span> A Markov chain description 
+of error-correction<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>Using symmetries 
+inherent in the [[7,1,3]] code and circuitry
+used to perform fault-tolerant computation, I demonstrate how to calculate
+the exact error distribution in an erasure error model using Markov chains.
+This approach, although complex, can be automated and is an
+alternative to Monte Carlo simulation if the code and circuits have enough
+symmetry.
+<hr>
+<a name="leung">Debbie Leung</a><br>
+<span style="font-weight: bold;">Title:</span> Fault-tolerant quantum
+computation with graph states<br>
+<br>
+<span style="font-weight: bold;">Abstract: </span>Invoking the notion
+of composable simulation, we provide a
+very
+simple proof why fault-tolerance and threshold analysis in graph state
+quantum computation require no extra technique beyond those required for
+the standard model. Lower bounds for the threshold thus follow from
+existing results.
+<p>
+Joint work with Panos Aliferis.<br>
+<hr>
+</body>
+</html>
